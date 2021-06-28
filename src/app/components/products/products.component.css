@@ -1,0 +1,25 @@
+
+.tabs{
+    display: flex;
+    list-style-type: none;
+}
+.tabs li{
+    margin-right: 0.5rem;
+}
+.tabs li a , i{
+    text-decoration: none;
+    color: #000;
+}
+mat-slider{
+    width: 100%;
+}
+.mb{
+    margin-bottom: 0;
+}
+mat-card .offer_on{
+    /* width: 200px; */
+    height: 300px;
+}
+mat-card img{
+    height: 300px;
+}

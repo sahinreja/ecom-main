@@ -1,0 +1,223 @@
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div> -->
+    <div class="carousel-inner">
+        <div class="carousel-item item_1 active" data-bs-interval="10000">
+            <!-- <img src="../../../assets/slider/blue-headphones.jpg" class="d-block w-100 height" alt="..."> -->
+            <div class="carousel-caption d-md-block d-none">
+                <div class="c_text">
+                    <h1>The Headphones</h1>
+                    <h3>What you were waiting for?</h3>
+                    <a mat-raised-button color="warn" routerLink="/products" >Shop Now </a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item item_2" data-bs-interval="2000">
+            <!-- <img src="../../../assets/slider/enjoy.jpg" class="d-block w-100 height" alt="..."> -->
+            <div class="carousel-caption d-md-block d-none">
+                <div class="c_text">
+                    <h1>The Tablets</h1>
+                    <h3>What you were waiting for?</h3>
+                    <a routerLink="/products" mat-raised-button color="warn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item item_3">
+            <!-- <img src="../../../assets/slider/happy-girl.jpg" class="d-block w-100 height" alt="..."> -->
+            <div class="carousel-caption d-md-block d-none">
+                <div class="c_text">
+                    <h1>The Enjoy</h1>
+                    <h3>What you were waiting for?</h3>
+                    <a routerLink="/products" mat-raised-button color="warn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container head">
+    <div class="row">
+        <div class="card p-3 pb-5 bg-dark">
+            <h3 style="font-weight: bold;" class="text-white">Best Weakend Deals</h3>
+            <div class="row">
+                <div class="col-md-3 col-4 mx-auto">
+                    <mat-card>
+                        <a routerLink="/products">
+                        <img mat-card-image src="../../../assets/home/Cases.png" alt=""></a>
+                        <mat-card-content class="mat-content">
+                            <b class="line_height">
+                                <h3 class="pName">₹12000</h3>
+                            </b>
+                        </mat-card-content>
+
+                    </mat-card>
+                </div>
+                <div class="col-md-3 col-4 mx-auto">
+                    <mat-card>
+                        <a routerLink="/products">
+                        <img mat-card-image src="../../../assets/home/smartwatch.png" alt=""></a>
+                        <mat-card-content class="mat-content">
+                            <b class="line_height">
+                                <h3 class="pName">₹3000</h3>
+                            </b>
+                        </mat-card-content>
+
+                    </mat-card>
+                </div>
+                <div class="col-md-3 col-4 mx-auto">
+                    <mat-card>
+                        <a routerLink="/products">
+                        <img mat-card-image src="../../../assets/home/p5 tv.png" alt=""></a>
+                        <mat-card-content class="mat-content">
+                            <b class="line_height">
+                                <h3 class="pName">₹90000</h3>
+                            </b>
+                        </mat-card-content>
+
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col-md-5 mx-auto col-10 cl-6 p-2 mb-3">
+            <div>
+                <img src="../../../assets/home/vrglasses-removebg-preview.png" width="150" alt="">
+            </div>
+            <div>
+                <h2>Vr Glasses</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.
+                </p>
+                <a routerLink="/products" mat-raised-button>Show now</a>
+            </div>
+        </div>
+        <div class="col-md-5 mx-auto col-10 cl-6 p-2">
+            <div>
+                <img src="../../../assets/home/smartwatch-removebg-preview.png" width="100" alt="">
+            </div>
+            <div>
+                <h2>Watches</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.
+                </p>
+                <a routerLink="/products" mat-raised-button>Show now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="heading  mb-5">
+    <div class="card cards">
+        <h3 class="text-primary">Discover</h3>
+        <h1 style="font-weight: bold;">What's Trending Now</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-10 mx-auto mb-3" *ngFor="let product of products">
+            <mat-card class="example-card">
+                <a routerLink="/product-details/{{product.id}}">
+                <img mat-card-image class="mat-image" src="../../../assets/home/{{product.image}}"
+                    alt="Photo of a Shiba Inu">
+                    </a>
+                <mat-card-content class="mat-content">
+                    <b class="line_height">
+                        <h3 class="pName"> {{product.title | slice:0:25}}</h3>
+                        {{product.price | currency:'INR'}}
+                    </b>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button style="width: 100%;" (click)="addToCart(product.id)" >
+                        <mat-icon style="color: rgb(105, 201, 10);font-weight: bold;" >add_shopping_cart</mat-icon>
+                        <b>Add to Cart</b>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    <div class="container text-center my-5">
+
+        <a class="btn btn-outline-primary" routerLink="/products" >Show More Products</a>
+
+    </div>  
+
+</div>
+
+
+<mat-divider></mat-divider>
+
+
+<div class="container-fluid" style="margin-top: 60px;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="col-md-12 mb-3">
+                <div class="card cd">
+                    <img src="../../../assets/home/wearable.jpg" alt="">
+                    <div class="all">
+                        <h1>Wearable</h1>
+                        <p>Smart electronic devices for your day to day life.</p>
+                        <a routerLink="/products" mat-raised-button>Shop Wearable</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+
+                <div class="card cd">
+                    <img src="../../../assets/home/innovative.jpg" alt="">
+                    <div class="all">
+                        <h1>Innovative</h1>
+                        <p>Make your life easeier with these smart solutions.</p>
+                        <a routerLink="/products" mat-raised-button>Shop Innovative</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card cd">
+                <img src="../../../assets/home/smartphone.jpg" alt="">
+                <div class="all">
+                    <h1>Smartphone</h1>
+                    <p>Your personal smartphone are just one click away.</p>
+                    <a routerLink="/products" mat-raised-button>Shop Smartphone</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-12 mb-3">
+                <div class="card cd">
+                    <img src="../../../assets/home/wifi.jpg" class="img-fluid" alt="">
+                    <div class="all">
+                        <h1>Wifi</h1>
+                        <p>Exclusive high quality wifi technology to extend your network.</p>
+                        <a routerLink="/products" mat-raised-button>Shop Wifi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card cd">
+                    <img src="../../../assets/home/headphones-yellow-bg.jpg" class="img-fluid last_img" alt="">
+                    <div class="all">
+                        <h1>Headphones</h1>
+                        <p>Enjoy your favorite playlist with an amazing sound quality.</p>
+                        <a routerLink="/products" mat-raised-button>Shop Headphones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
